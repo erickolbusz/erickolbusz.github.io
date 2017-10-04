@@ -5,29 +5,59 @@
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css"></link>
     <style>
-    	.background {
-    		background-color: green;
+    	a {
+			color: inherit;
+ 			text-decoration: none;
+ 		}
+
+		body {
+    		font-size: 1.25em;
+		}
+
+    	.background-header {
     		margin-top: 5em;
     	}
-    	.test {
-    		background-color: black;
+    	.internal {
+    		padding: 2em 2em 0em 2em;
     	}
-    	.data {
-    		padding: 2em 2em 2em 2em;
+
+    	#profile-picture {
+    		width: 100%;
+    		border: 0.5em solid black;
+    		position: relative;
+    		top: -3.75em;
+    		left: -3em;
+    	}
+    	#github-mark {
+    		width: 24px;
+    		position:relative;
+    		top: 6px;
+    		left: 1px;
+    		margin-right: 15px;
     	}
     </style>
 </head>
 <body>
-	<div class="container background z-depth-5">
-		<div class="data">
-			<div class="row">
-				<div class="col s4 test" style="padding: 0 0 0 0;">
-					<img src="img.png" style="width:100%; padding: 0.625em 0.625em 0.625em 0.625em;"></img>
+	<div class="container background-header z-depth-5 indigo darken-1">
+		<div class="internal">
+			<div class="row" style="margin-bottom: 0;">
+				<div class="col s4" style="padding: 0 0 0 0;">
+					<img class="z-depth-4" src="me.png" id="profile-picture"></img>
 				</div>
-				<div class="col s8">
-					ueifhiuwesfiuwhiughwesui
+				<div class="col s7 indigo-text text-lighten-4">
+					<h1 style="margin-bottom:0;">Eric Kolbusz</h2>
+					<hr>
+					<br>
+					<a href="mailto:erickolbusz@gmail.com"><i class="material-icons left">email</i>erickolbusz@gmail.com</a><br style="line-height: 220%">
+					<a href="https://github.com/erickolbusz"><img src="GitHub-Mark-Light-32px.png" id="github-mark"></img>erickolbusz</a><br style="line-height: 440%">
+					Currently studying Computer Science and Physics<br>in the Macaulay Honors College at the City College of New York
 				</div>
 			</div>
+		</div>
+	</div>
+	<div class="container background-header z-depth-5 indigo lighten-1" style="margin-top:0px;">
+		<div class="internal">
+			asdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasddfasdfasdf
 		</div>
 	</div>
 </body>
