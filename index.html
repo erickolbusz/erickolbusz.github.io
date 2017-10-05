@@ -20,12 +20,61 @@
 		ul:not(.browser-default) li {
 			list-style-type: disc;
 		}
+		span {
+  			display: inline-block;
+  			vertical-align: middle;
+		}
 
     	.background-header {
     		margin-top: 5em;
     	}
-    	.internal {
+    	.internal-header {
     		padding: 2em 2em 0em 2em;
+    	}
+    	.internal-body {
+    		padding: 2em 2em 1em 2em;
+    	}
+
+    	.project {
+    		padding-left: 6em;
+    		margin-bottom: -4em;
+    	}
+    	.proj-thumbnail {
+    		width: 6em;
+    		border: 0.25em solid black;
+    		background-color: black;
+    		position: relative;
+    		top: -1em;
+    		left: -6em;
+    		display: inline;
+    		z-index: 1;
+    	}
+    	.proj-name {
+    		display: inline;
+    		position: relative;
+    		top: -2.875em;
+    		left: -3.5em;
+    		font-size: 1.75em;
+    	}
+    	.proj-git {
+    		height: 1em;
+    		padding-left: 0.25em;
+    	}
+    	.proj-hr {
+    		border-color: black;
+    		background-color: black;
+    		margin-left: 0;
+    		width: 25em;
+    		height: 0.125em;
+    		position: relative;
+    		top: -5.875em;
+    		left: -3.875em;
+    	}
+    	.proj-text {
+    		position: relative;
+    		top: -6em;
+    		left: 0.75em;
+    		margin-right: 0.75em;
     	}
 
     	#profile-picture {
@@ -38,7 +87,7 @@
     	}
     	#github-mark {
     		width: 24px;
-    		position:relative;
+    		position: relative;
     		top: 6px;
     		left: 1px;
     		margin-right: 15px;
@@ -47,7 +96,7 @@
 </head>
 <body>
 	<div class="container background-header z-depth-5 indigo darken-1">
-		<div class="internal">
+		<div class="internal-header">
 			<div class="row" style="margin-bottom: 0;">
 				<div class="col s4" style="padding: 0 0 0 0;">
 					<img class="z-depth-4" src="me.png" id="profile-picture"></img>
@@ -58,14 +107,14 @@
 					<br>
 					<a href="mailto:erickolbusz@gmail.com"><i class="material-icons left">email</i>erickolbusz@gmail.com</a><hr style="margin: 0; height: 8.5pt; visibility: hidden;" />
 					<a href="https://github.com/erickolbusz"><img src="GitHub-Mark-Light-32px.png" id="github-mark"></img>erickolbusz</a><hr style="margin: 0; height: 39pt; visibility: hidden;" />
-					<p style="margin: 0; padding-bottom: 1em;">
+					<p style="margin: 0; padding-bottom: 1.5em;">
 					Currently studying Computer Science and Physics<br>in the Macaulay Honors College at the City College of New York</p>
 				</div>
 			</div>
 		</div>
 	</div>
 	<div class="container background-header z-depth-5 indigo lighten-4" style="margin: 0 auto 3em auto;">
-		<div class="internal">
+		<div class="internal-body">
 			<h3 style="margin: 0;">Specialties and Interests</h3>
 			<hr style="border-color: black;">
 			<div class="row">
@@ -80,28 +129,36 @@
 					<ul>
 						<li>Data science and visualization</li>
 						<li>CTF competitions</li>
-						<li></li>
+						<li>Dated internet humor</li>
 
 					</ul>
 				</div>
 			</div>
-			<h3 style="margin-bottom: 0;">Notable Projects</h3>
-			<hr style="border-color: black;">
-			<div class="row">
-				<div class="col s6">
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sodales dapibus ipsum egestas pellentesque. Vestibulum varius quam nunc. Phasellus malesuada eros ac ligula interdum tincidunt. Aliquam viverra augue sit amet nibh lobortis ultricies. Ut vel augue congue, viverra dui id, hendrerit nisl. Integer a urna sed ipsum egestas vulputate eu id arcu. Nulla vel cursus nibh, et cursus tortor. Maecenas arcu quam, rutrum sed nisi congue, aliquam pretium lacus. Duis id posuere nulla, a cursus metus. Nunc fermentum a nibh et porta.
-				</div>
-				<div class="col s6">
-				Quisque vel imperdiet ante. Proin tincidunt, libero sit amet maximus mattis, velit velit tincidunt tortor, ut semper lorem ipsum a lacus. Proin vitae imperdiet lectus, non vehicula nulla. Maecenas vel tellus a quam bibendum elementum quis sit amet lectus. Maecenas nec maximus metus. Nunc ultricies ipsum arcu, ut consectetur justo egestas a. Maecenas pretium massa eget placerat pretium. In felis nisl, interdum ut elementum id, congue varius neque. Quisque vel euismod urna, quis faucibus nunc. Praesent tempor luctus nulla et vehicula. Aliquam eu venenatis risus, ac eleifend dui. Suspendisse potenti. Fusce euismod est nec nisi dignissim pulvinar.
-				</div>
+			<h3 style="display: inline; margin-bottom: 0;">Notable Projects</h3>
+			<h5 style="display: inline; margin-bottom: 0;">in chronological order</h5>
+			<hr style="border-color: black;"><br>
+			<div class="project">
+				<img class="z-depth-3 circle proj-thumbnail" src="me.png"></img>
+				<p class="proj-name">
+					Ferries
+					<a href="https://github.com/softDEAD/Ferries"><img class="proj-git" src="GitHub-Mark-120px-plus.png"></img></a>
+				</p>
+				<hr class="proj-hr" />
+				<p class="proj-text">
+					A website built for hungry Stuyvesant High School students too lazy to go outside for lunch - place an order (and leave a tip!) for another student to go get you lunch while you do homework all period.<br><br>
+					<b>Dream it. Code it. Win it. 2015:</b><i>"Samsung Global Innovation Center: Unleashing Opportunities with Technology Award"</i>
+				</p>
 			</div>
-			<div class="row">
-				<div class="col s6">
-				Aliquam placerat dapibus augue, sed aliquam nibh mattis et. Vivamus elementum consequat dapibus. Maecenas tincidunt nec turpis et ornare. Nam mi lacus, suscipit a ligula vel, commodo luctus quam. Pellentesque sed nibh vitae nulla tempor maximus quis sit amet felis. Quisque consectetur neque quam, vitae molestie arcu mattis at. Donec erat purus, tempor non mattis ac, efficitur ac mi. Nam dictum erat quis magna tincidunt tincidunt. Nullam sit amet pulvinar purus. Aliquam volutpat velit libero, in posuere turpis feugiat nec. Suspendisse sit amet mattis augue, nec feugiat ante.
-				</div>
-				<div class="col s6">
-				Mauris ex ex, iaculis a sodales in, tincidunt ut mi. In dapibus odio ut vulputate tincidunt. Curabitur vel purus dignissim, facilisis neque vitae, pulvinar orci. Aenean posuere vel ipsum et aliquet. Phasellus rutrum feugiat mauris, nec varius neque dictum sit amet. Nulla interdum neque vel magna semper ornare. Cras facilisis ante tristique, consequat arcu ut, condimentum tortor. Aenean vitae augue luctus est facilisis pellentesque. Nulla nulla ipsum, venenatis viverra lobortis at, dapibus non erat. Mauris ornare enim ante, non dapibus odio ultrices venenatis. Praesent rutrum auctor gravida. Cras arcu quam, efficitur vitae ultricies ac, varius in elit. Maecenas blandit tristique est, vel eleifend nulla faucibus non. Pellentesque nec lectus at ante placerat sollicitudin commodo a nibh. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integer et lacinia erat.
-				</div>
+			<div class="project">
+				<img class="z-depth-3 circle proj-thumbnail" src="me.png"></img>
+				<p class="proj-name">
+					wheredabathroomatdoe
+					<a href="https://github.com/wheredabathroomatdoe/wheredabathroomatdoe"><img class="proj-git" src="GitHub-Mark-120px-plus.png"></img></a>
+				</p>
+				<hr class="proj-hr" />
+				<p class="proj-text">
+					A crowd-sourced public utility rating and locator website application for when you need a bathroom, bench, or water fountain.
+				</p>
 			</div>
 		</div>
 	</div>
