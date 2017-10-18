@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style>
+	h2, button {
+		display: inline;
+	}
+	table {
+		text-align: center;
+	}
+	td {
+		padding-right: 0.5em;
+	}
+	</style>
+</head>
+<body>
+<h2>Parameters</h2>&nbsp;&nbsp;
+<button type="button" id="submit">Submit</button><br><br>
+<table>
+<tr>
+	<td>S</td>
+	<td><input type="text" style="width: 8em" id="s" value="ATAGC"/></td>
+</tr>
+<tr>
+	<td>T</td>
+	<td><input type="text" style="width: 8em" id="t" value="CTAGT"/></td>
+</tr>
+<tr>
+	<td>Match</td>
+	<td><input type="text" style="width: 3em" id="ma" value="+2"/></td>
+</tr>
+<tr>
+	<td>Mismatch</td>
+	<td><input type="text" style="width: 3em" id="mm" value="-1"/></td>
+</tr>
+<tr>
+	<td>Open Gap</td>
+	<td><input type="text" style="width: 3em" id="o" value="-2"/></td>
+</tr>
+<tr>
+	<td>Extend Gap</td>
+	<td><input type="text" style="width: 3em" id="e" value="-1"/></td>
+</tr>
+</table>
+<br><br>
+<div id="output"></div>
+<script src="script.js"></script>
+</body>
+</html>
