@@ -64,6 +64,7 @@ ul:not(.browser-default) li {
 	top: -6em;
 	left: 0.75em;
 	margin-right: 0.75em;
+	margin-bottom: 0;
 }
 
 #profile-picture {
