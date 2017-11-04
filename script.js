@@ -1,56 +1,35 @@
+//to do: generate table from data array
 var data = {
 	"projShellerino": {
 		name: "Shellerino",
 		url: "https://github.com/erickolbusz/Shellerino",
-		desc: "my name jeff"
+		desc: "The least user-friendly shell of all time, written in C."
 	},
 	"projChess": {
 		name: "Python Lisp Chess",
 		url: "https://github.com/erickolbusz/Python-Lisp-Chess",
-		desc: "asdasd"
+		desc: "Local multiplayer chess written in completely vanilla Python and hosted with cgi-bin."
 	},
 	"projGraphics": {
 		name: "Graphics Engine",
-		url: "https://github.com/erickolbusz/",
-		desc: "ssss"
+		url: "https://github.com/erickolbusz/graphics_final",
+		desc: "3D graphics drawing and animation engine written in Python."
 	},
-	"projDonger": {
-		name: "Donger Creator",
-		url: "https://github.com/erickolbusz/",
-		desc: "eee"
-	},
-	"projFind": {
-		name: "Find the Donger",
-		url: "https://github.com/erickolbusz/",
-		desc: "awdqqrrfrf"
+	"projSoftDev": {
+		name: "Stuy SoftDev",
+		url: "https://github.com/erickolbusz/softdev",
+		desc: "Compilation of various projects from senior year Software Development at Stuyvesant High School."
 	}
 };
 
-/*
-	"proj": {
-		name: "",
-		url: "https://github.com/erickolbusz/",
-		desc: ""
-	}
-*/
-
-var changeData = function(i) {
-	var s = data[i].name + "<a href=\""+ data[i].url + "\"><img class=\"proj-git\" src=\"GitHub-Mark-120px-plus.png\"></img></a>";
-	document.getElementById("tempName").innerHTML = s;
-	document.getElementById("tempDesc").innerHTML = data[i].desc;
-
-}
 var setup = function(proj) {
-	//var projId = proj.id;
-	//console.log(projId, data[projId], data[projId].name);
 	proj.onmouseover = function() {
-		//console.log("e");
-		changeData(proj.id);
+		document.getElementById("tempName").innerHTML = data[proj.id].name;
+		document.getElementById("tempDesc").innerHTML = data[proj.id].desc;
 	}
-	/*proj.onclick = function() {
-		//console.log("e");
-		changeData(proj.id);
-	}*/
+	proj.onclick = function() {
+		window.location = data[proj.id].url;
+	}
 }
 
 var table = document.getElementById("projTable");
@@ -68,14 +47,5 @@ for (var i=0; i<rows.length; i++) {
 }
 
 //default to first project
-changeData(firstProj.id);
-/*
-				<div class="project">
-					<p class="proj-name" id="tempName">
-					</p>
-					<hr class="proj-hr" />
-					<p class="proj-text" id="tempDesc">
-						Test. Test. Test. Test. Test. Test. Test. Test. Test. Test. Test. Test. Test. Test. Test. Test. Test. Test. Test. Test. Test. Test. Test. Test. Test. Test. Test. Test. Test. Test. Test. Test. Test. Test. Test. Test. Test. Test. Test. Test. Test. Test.
-					</p>
-				</div>*/
-
+document.getElementById("tempName").innerHTML = data[firstProj.id].name;
+document.getElementById("tempDesc").innerHTML = data[firstProj.id].desc;

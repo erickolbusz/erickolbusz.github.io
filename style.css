@@ -67,6 +67,39 @@ ul:not(.browser-default) li {
 	margin-bottom: 0;
 }
 
+
+.thumb-td {
+	width: 25%;
+	padding: 0 0.2em 0.4em 0.2em;
+}
+.thumb-text {
+	color: white;
+}
+.thumb-div {
+	margin: 0;
+	text-align: center;
+	background-color: #3f51b5;
+	cursor: pointer;
+}
+.thumb-div:hover {
+	background-color: #536dfe;
+}
+
+.disp-name {
+	margin: 0.5em auto 0 auto;
+	font-size: 1.75em;
+}
+.disp-hr {
+	border-color: black;
+	background-color: black;
+	margin: 0 auto auto 0;
+	height: 0.0625em;
+	width: 40%;
+}
+.disp-text {
+	margin-bottom: 2em;
+}
+
 #profile-picture {
 	width: 100%;
 	border: 0.5em solid black;
