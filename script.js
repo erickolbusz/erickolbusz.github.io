@@ -19,6 +19,16 @@ var data = {
 		name: "Stuy SoftDev",
 		url: "https://github.com/erickolbusz/softdev",
 		desc: "Compilation of various projects from senior year Software Development at Stuyvesant High School."
+	},
+	"projstoPP": {
+		name: "stoPProcrastinating",
+		url: "https://github.com/erickolbusz/stoPProcrastinating",
+		desc: "Background process that kills any distracting programs until a certain amount of time has been spent working."
+	},
+	"projSW": {
+		name: "Smith-Waterman Tracer",
+		url: "https://github.com/erickolbusz/erickolbusz.github.io/tree/master/sw",
+		desc: "Affine-gap Smith-Waterman algorithm visualizer with full LaTeX output. Live at /sw/sw.html."
 	}
 };
 
@@ -34,6 +44,7 @@ var setup = function(proj) {
 
 var table = document.getElementById("projTable");
 var rows = table.children[0].children;
+console.log(rows);
 var firstProj = null;
 for (var i=0; i<rows.length; i++) {
 	var cells = rows[i].children;
