@@ -1,0 +1,59 @@
+<head>
+  <style type="text/css">
+    html, body, canvas {
+      margin: 0;
+      padding: 0;
+      width: 100vw;
+      height: 100vh;
+      position: relative;
+    }
+    #heatmap-div {
+      margin: 0;
+      padding: 0;
+      width: 100vw;
+      height: 100vh;
+      overflow: hidden;
+      position: absolute;
+      z-index: -1;
+    }
+    #func-div {
+      margin: 1em 0em 0em 1em;
+      padding: 0em 1em 0em 1em;
+      background-color: #aaaaaa;
+      position: absolute;
+      z-index: 1;
+    }
+    #mouse-div {
+      margin: 0;
+      padding: 0;
+      width: 100vw;
+      height: 100vh;
+      overflow: hidden;
+      position: absolute;
+      z-index: 0;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="func-div">
+    <br>
+    <form>
+      <label for="textbox">f(x,y) = </label>
+      <input type="text" id="funcBox" name="textbox">
+      <input type="button" id="funcButton" value="Plot"></input>
+      <br>
+      <p id="coordBox"></p>
+    </form>
+  </div>
+
+  <div id="mouse-div"></div>
+
+  <div id="heatmap-div">
+     <!-- <canvas id="myCanvas"></canvas>-->
+  </div>
+
+  <script type="text/javascript" src="heatmap.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/7.0.2/math.js"></script>
+  <script type="text/javascript" src="script.js"></script>
+</body>
