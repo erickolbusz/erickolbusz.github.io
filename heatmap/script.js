@@ -27,6 +27,7 @@ var genHeat = function(f) {
       });
     }
   }
+  console.log(points);
   return {max: max, min: min, data: points};
 }
 
@@ -36,6 +37,7 @@ var plotFunction = function() {
 }
 
 var updateCoordBox = function(event) {
+  console.log("E");
   var coordBox = document.querySelector('#coordBox');
   //get mouse coords
   var mx = event.clientX;
@@ -45,9 +47,16 @@ var updateCoordBox = function(event) {
   var py = DY*Math.round(my/DY);
   var pyInv = window.innerHeight - py;
   var val = Math.round(1000*heatmap.getValueAt({ x:px, y:py }))/1000; //theyre int only :(
-  //change coordBox text and position
-  x = Math.round(1000*((px/window.innerWidth)*MAXX + (1-(px/window.innerWidth))*MINX))/1000;
-  y = Math.round(1000*((pyInv/window.innerHeight)*MAXY + (1-(pyInv/window.innerHeight))*MINY))/1000;
+  //calculate the function value...
+  var x = (px/window.innerWidth)*MAXX + (1-(px/window.innerWidth))*MINX;
+  var y = (pyInv/window.innerHeight)*MAXY + (1-(pyInv/window.innerHeight))*MINY;
+  var eqn = math.simplify(document.querySelector('#funcBox').value);
+  val = math.re(eqn.evaluate( {x:x, y:y} ));
+  console.log(val);
+  //round, change coordBox text
+  x = Math.round(1000*x)/1000;
+  y = Math.round(1000*y)/1000;
+  val = Math.round(1000*val)/1000;
   coordBox.innerHTML = "f("+x+", "+y+") = "+val;
 }
 
