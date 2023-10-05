@@ -8,9 +8,9 @@
 	<style>
 		.slider {
 		  -webkit-appearance: none;
-		  width: 50%;
-		  height: 20px;
-		  border-radius: 20px;  
+		  width: 70%;
+		  height: 15px;
+		  border-radius: 15px;  
 		  background: #dddddd;
 		  outline: none;
 		  opacity: 1;
@@ -21,14 +21,14 @@
 		.slider::-webkit-slider-thumb {
 		  -webkit-appearance: none; /* Override default look */
 		  appearance: none;
-		  width: 25px; /* Set a specific slider handle width */
-		  height: 25px; /* Slider handle height */
+		  width: 30px; /* Set a specific slider handle width */
+		  height: 30px; /* Slider handle height */
 		  background: #04AA6D; /* Green background */
 		  cursor: pointer; /* Cursor on hover */
 		}
 		.slider::-moz-range-thumb {
-		  width: 50px;
-		  height: 50px;
+		  width: 30px;
+		  height: 30px;
 		  border-radius: 50%;
 		  background: #2d865f;
 		  cursor: pointer;
@@ -36,6 +36,9 @@
 		}
 
 		.imgbin {
+			width: 100%;
+		}
+		.slidediv {
 			width: 100%;
 		}
 		.leftdiv {
@@ -55,14 +58,14 @@
 <body>
 	<div class="leftdiv">
 		<img class="imgbin" id="dpdfplot" src="./framedata/151/n_p151_frames41_frame0.png" alt="dpdf">
-		<div class="slidecontainer">
-			No PEN <input type="range" min="0" max="100" value="0" class="slider" id="scalerange"> Full PEN
+		<div class="slidediv">
+			No PEN <input type="range" min="0" max="10000" value="0" class="slider" id="scalerange"> Full PEN
 		</div>
 	</div>
 	<div class="rightdiv">
 		<img class="imgbin" id="x1plot" src="./framedata/151/n_p151_pdfslice0.png" alt="pdf at given x2">
-		<div class="slidecontainer">
-			x<sub>2</sub> = 0 <input type="range" min="0" max="100" value="0" class="slider" id="x2range"> x<sub>2</sub> = 1
+		<div class="slidediv">
+			x<sub>2</sub> = 0 <input type="range" min="0" max="10000" value="0" class="slider" id="x2range"> x<sub>2</sub> = 1
 		</div>
 	</div>
 
