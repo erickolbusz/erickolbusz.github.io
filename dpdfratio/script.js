@@ -9,7 +9,8 @@ scaleslider.oninput = function() {
 	//now we need to round the value to the nearest frame
 	//min -> frame 0
 	//max -> frame numframes-1
-	dpdf_numframe = Math.round((NUMFRAMES-1)*(this.value - this.min)/(this.max - this.min));
+	dpdf_numframe = Math.round((NP-1)*(this.value - this.min)/(this.max - this.min));
+	console.log(dpdf_numframe);
 	if (dpdf_numframe != dpdf_currentframe) {
 		dpdf_currentframe = dpdf_numframe;
 		dpdfplot.src = `./framedata/${NP}/n_p${NP}_dpdfratioslice${dpdf_currentframe}.png`;
