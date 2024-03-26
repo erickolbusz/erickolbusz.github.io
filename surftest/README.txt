@@ -11,3 +11,8 @@ mapsv3
 	+ sidistic t7
 	~ topology t8->t7
 	~ rise -> rise_fix (this is not real)
+mapsv4
+	+ greek t2
+	+ selenka2 t5
+	~ not_so_zen -> nsz_fix
+	~ rise_fix -> rise_refix is now staged, one bonus unzoned (not real also)
