@@ -16,3 +16,5 @@ mapsv4
 	+ selenka2 t5
 	~ not_so_zen -> nsz_fix
 	~ rise_fix -> rise_refix is now staged, one bonus unzoned (not real also)
+mapsv5
+	~ rise_refix -> rise_refix_2  (not real also)
